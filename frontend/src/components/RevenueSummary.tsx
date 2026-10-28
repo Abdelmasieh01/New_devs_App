@@ -9,12 +9,12 @@ interface RevenueData {
 }
 
 interface RevenueSummaryProps {
-    propertyId?: string;
+    propertyId: string;
     debugTenant?: string; 
     showRaw?: boolean;
 }
 
-export const RevenueSummary: React.FC<RevenueSummaryProps> = ({ propertyId = 'prop-001', debugTenant, showRaw }) => {
+export const RevenueSummary: React.FC<RevenueSummaryProps> = ({ propertyId, debugTenant, showRaw }) => {
     const [data, setData] = useState<RevenueData | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
